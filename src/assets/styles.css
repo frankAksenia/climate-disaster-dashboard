@@ -1,0 +1,64 @@
+.info-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.info-button {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.info-button:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+}
+
+.info-tooltip {
+  position: absolute;
+  left: 0;
+  z-index: 5;
+  width: 280px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 11px;
+  line-height: 1.4;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(var(--info-tooltip-offset, 4px));
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.info-tooltip--below {
+  top: 24px;
+  --info-tooltip-offset: 4px;
+}
+
+.info-tooltip--above {
+  bottom: 24px;
+  --info-tooltip-offset: -4px;
+}
+
+.info-wrapper:hover .info-tooltip,
+.info-wrapper:focus-within .info-tooltip,
+.info-tooltip:hover {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
