@@ -4,6 +4,8 @@ An interactive dashboard exploring temperature change, atmospheric CO₂, climat
 
 Originally developed as a coursework project, this application demonstrates interactive data visualization, reactive state management, and the integration of multiple CSV datasets in the browser.
 
+![Climate Disaster Dashboard showing early warnings, climate trends, the imports–disasters matrix, and a country scatterplot.](docs/images/climate-disaster-dashboard.png)
+
 ## Explore the dashboard
 
 The dashboard supports three central questions:
@@ -99,3 +101,9 @@ The climate datasets were supplied through the course Moodle platform and identi
 - **Projections:** The early warning panel extends the slope between the first and last historical observations by five years: `latest + ((latest − first) / elapsed years) × 5`. These are simple exploratory extrapolations, not validated climate forecasts.
 - **Matrix:** Disaster growth is calculated from the first nonzero count to the final count within 1994–2023. Quartiles describe relative groups within the dataset; the matrix does not establish a causal effect of imports on disasters.
 - **Data limitations:** The current numeric conversion treats empty CSV cells as zero. Missing observations and zero baselines can therefore affect averages and percentage changes.
+
+## License
+
+The original application source code is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Ksenia Frank.
+
+Third-party dependencies, the CSV datasets in [`public/`](public/), and [`public/un_icon.ico`](public/un_icon.ico) are excluded from this license and remain subject to their respective copyright and usage terms. The MIT License does not grant permission to reuse or redistribute those third-party materials.

@@ -2,6 +2,7 @@
   "name": "vis-vue-d3",
   "version": "0.0.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
